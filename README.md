@@ -25,9 +25,8 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
-
-> Answer:
+- [x]  Explain benefit(s) using `client-side routing`?
+> Answer: Lower number of page reloads leads to speed and a better user experience. We aren't changing pages, we are changing components within the page which is controlled by Javscript in the browser. This leads to the one page app visually.
 
 ## Project Set Up
 
