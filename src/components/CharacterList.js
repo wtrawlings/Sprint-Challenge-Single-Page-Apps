@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -20,9 +21,14 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
+  let filteredCharacters = characters.filter(
+    (character) => {
+      return character.name.toLowerCase().indexOf(character.name.toLowerCase()) !== -1;
+    }
+  );//this.props.characters.filter();
   return (
     <section className="character-list">
-        {characters.map(character => {
+        {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
           <div>
           <CharacterCard 
