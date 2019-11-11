@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function SearchForm() {
- 
+ const [search, setSearch] = useState("");
   return (
     <section className="search-form">
     <label htmlFor="search">Search by Name: </label>
