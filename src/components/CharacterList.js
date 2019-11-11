@@ -8,11 +8,10 @@ export default function CharacterList() {
 
   useEffect(() => {
     axios
-      .get(`https://rickandmortyapi.com/api/character/1`)
+      .get(`https://rickandmortyapi.com/api/character/`)
       .then(response => {
         console.log(response.data.results);
         setCharacters(response.data.results);
-        
       })
       .catch(error => {
         console.log(`useEffect error in CharacterList: ${error}`);
@@ -23,7 +22,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      {characters.map((character, id) =>{
+        {characters.map(character => {
         return (
           <div>
           <CharacterCard 
