@@ -7,6 +7,8 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
 
+
+  
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/character/`)
@@ -28,6 +30,7 @@ export default function CharacterList() {
   );//this.props.characters.filter();
   return (
     <section className="character-list">
+      <SearchForm />
         {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
           <div>

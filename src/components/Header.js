@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CharacterList from "./CharacterList";
 import WelcomePage from "./WelcomePage";
 import SearchForm from "./SearchForm";
@@ -8,11 +8,13 @@ export default function Header() {
   return (
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
-      <Link exact to="/"><h2>home</h2></Link>
-      <Link exact to="/characters"><h2>characters</h2></Link>
-      <SearchForm />
-      <Route exact path="/" component={WelcomePage} />
-      <Route exact path="/characters" component={CharacterList} />
+      <Router>
+        <Link to="/"><h3>home</h3></Link>
+        <Link to="/characters"><h3>characters</h3></Link>
+        <Route exact path="/" component={WelcomePage} />
+        <Route path="/characters" component={CharacterList} />
+      </Router>
+      
     </header>
     
     
