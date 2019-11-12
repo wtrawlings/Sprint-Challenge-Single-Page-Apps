@@ -6,7 +6,7 @@ import SearchForm from "./SearchForm";
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
-
+  
 
   
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <SearchForm 
-      character={character}
+      characters={characters}
       />
         {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (

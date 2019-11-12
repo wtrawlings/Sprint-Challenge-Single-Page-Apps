@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CharacterList from "./CharacterList";
 import WelcomePage from "./WelcomePage";
+import SearchForm from "./SearchForm";
 
 
 export default function Header() {
@@ -11,8 +12,10 @@ export default function Header() {
       <Router>
         <Link to="/"><h3>home</h3></Link>
         <Link to="/characters"><h3>characters</h3></Link>
+        <Link to="/search"><h3>search</h3></Link>
         <Route exact path="/" component={WelcomePage} />
         <Route path="/characters" component={CharacterList} />
+        <Route path="/search" component={SearchForm} />
       </Router>
       
     </header>
