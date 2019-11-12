@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function SearchForm() {
- const [search, setSearch] = useState("");
+ const [nameSearch, setNameSearch] = useState("");
   return (
     <section className="search-form">
     <label htmlFor="search">Search by Name: </label>
@@ -10,10 +10,14 @@ export default function SearchForm() {
       name="search"
       id="search"
       //value={this.state.search}
-      //onChange={this.updateSearch.bind(this)} 
-      //check your onChange and value
+      onChange={event =>{
+        setNameSearch(event.target.value);
+        //console.log(nameSearch)
+      }} 
       />
     
     </section>
+      
+
   );
 }

@@ -30,7 +30,9 @@ export default function CharacterList() {
   );//this.props.characters.filter();
   return (
     <section className="character-list">
-      <SearchForm />
+      <SearchForm 
+      character={character}
+      />
         {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
           <div>

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CharacterList from "./CharacterList";
 import WelcomePage from "./WelcomePage";
-import SearchForm from "./SearchForm";
+
 
 export default function Header() {
   return (
