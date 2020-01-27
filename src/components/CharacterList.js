@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
-import SearchForm from "./SearchForm";
+//import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -30,9 +30,10 @@ export default function CharacterList() {
   );//this.props.characters.filter();
   return (
     <section className="character-list">
-      <SearchForm 
+      {/* <SearchForm 
       characters={characters}
-      />
+      /> */}
+      {/* un comment if you can't get this thing to work- also at top at the import */}
         {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
           <div>

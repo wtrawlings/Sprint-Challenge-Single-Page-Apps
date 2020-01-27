@@ -9,6 +9,7 @@ export default function SearchForm(props) {
      <input 
       type="text"
       name="search"
+      placeholder="type a name"
       id="search"
       //value={this.state.search}
       onChange={event => {
@@ -32,7 +33,7 @@ export default function SearchForm(props) {
         </div>
         )
       })}
-      
+      <h3>This is the end of the search area. The rest is the normal full list.</h3>
     </section>
       
 
