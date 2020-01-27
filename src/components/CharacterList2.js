@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
-//import SearchForm from "./SearchForm";
+import SearchForm from "./SearchForm";
 
-export default function CharacterList() {
+export default function CharacterList2() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
   
@@ -17,7 +17,7 @@ export default function CharacterList() {
         setCharacters(response.data.results);
       })
       .catch(error => {
-        console.log(`useEffect error in CharacterList: ${error}`);
+        console.log(`useEffect error in CharacterList2: ${error}`);
       });
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
@@ -30,23 +30,22 @@ export default function CharacterList() {
   );//this.props.characters.filter();
   return (
     <section className="character-list">
-      {/* <SearchForm 
+      <SearchForm 
       characters={characters}
-      /> */}
-      {/* un comment if you can't get this thing to work- also at top at the import */}
-        {filteredCharacters.map((character, key) => { //filteredCharacters used to be characters
+      />
+        {/* the below section is removed to remove the redundant list generation where it would make a whole list after the filter action. */}
+        {/* {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
           <div key={character.id}>
           <CharacterCard 
             name={character.name}
-            key={character.id}
             id={character.id}
             origin={character.origin}
             image={character.image}
           />
         </div>
         )
-      })}
+      })} */}
       
     </section>
   );
