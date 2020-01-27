@@ -33,10 +33,10 @@ export default function CharacterList2() {
       <SearchForm 
       characters={characters}
       />
-     
-        {filteredCharacters.map(character => { //filteredCharacters used to be characters
+        {/* the below section is removed to remove the redundant list generation where it would make a whole list after the filter action. */}
+        {/* {filteredCharacters.map(character => { //filteredCharacters used to be characters
         return (
-          <div>
+          <div key={character.id}>
           <CharacterCard 
             name={character.name}
             id={character.id}
@@ -45,7 +45,7 @@ export default function CharacterList2() {
           />
         </div>
         )
-      })}
+      })} */}
       
     </section>
   );

@@ -34,11 +34,12 @@ export default function CharacterList() {
       characters={characters}
       /> */}
       {/* un comment if you can't get this thing to work- also at top at the import */}
-        {filteredCharacters.map(character => { //filteredCharacters used to be characters
+        {filteredCharacters.map((character, key) => { //filteredCharacters used to be characters
         return (
-          <div>
+          <div key={character.id}>
           <CharacterCard 
             name={character.name}
+            key={character.id}
             id={character.id}
             origin={character.origin}
             image={character.image}

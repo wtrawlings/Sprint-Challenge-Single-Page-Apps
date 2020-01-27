@@ -9,7 +9,7 @@ export default function SearchForm(props) {
      <input 
       type="text"
       name="search"
-      placeholder="type a name"
+      placeholder="start typing a name"
       id="search"
       //value={this.state.search}
       onChange={event => {
@@ -21,11 +21,12 @@ export default function SearchForm(props) {
         console.log(filterNameSearch)
       }} 
       />
-      {nameSearch.map(character => { 
+      {nameSearch.map((character, key) => { 
         return (
-          <div>
+          <div key={character.id}>
           <CharacterCard 
             name={character.name}
+            key={character.id}
             id={character.id}
             origin={character.origin}
             image={character.image}
